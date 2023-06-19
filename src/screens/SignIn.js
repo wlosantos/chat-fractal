@@ -1,11 +1,13 @@
 import { View, Text, TouchableOpacity } from 'react-native';
-
-import { signIn } from '../services/auth';
+import AuthContext from '../contexts/auth';
+import { useContext } from 'react';
 
 const SignIn = () => {
-  const handleSign = async() => {
-    const response = await signIn();
-    console.warn(response);
+
+  const { signIn } = useContext(AuthContext);
+
+  const handleSign = () => {
+    signIn();
   };
 
   return (
