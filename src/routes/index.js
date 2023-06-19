@@ -7,7 +7,6 @@ import AuthRoutes from './auth.routes';
 
 const Routes = () => {
   const { signed } = useContext(AuthContext);
-  console.log(signed);
 
   return (
     <NavigationContainer>
